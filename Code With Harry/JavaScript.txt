@@ -48,7 +48,54 @@ console.error("this is an error"); // for showing an error on console
 ===========================================================================
 ===========================================================================
 Session 3
+/*Most common programming case types:
+1.camel_Case
+2.Kebab-case
+3.snake_case
+4.PascalCase
+*/
+
+/*
+var	let	const
+1)var
+The scope of a var variable is functional scope.	
+It can be updated and re-declared into the scope.
+
+2)let
+The scope of a let variable is block scope.
+It can be updated but cannot be re-declared into the scope.	
 
 
+3)const
+The scope of a const variable is block scope.
+It cannot be updated or re-declared into the scope.
+*/
 
+//Rules for creating JavaScipt variables
+/*
+1)Cannot start with numbers 
+2)Can start with letter , _ or $
+3)Are case sensitive
+*/
+===========================================================================
+===========================================================================
+Session 4
+Data types
 
+Data Types in JS
+1) Primitive Data Types
+Strings "lokesh"
+numbers 45
+Boolean true false
+Null
+undefined var name;//here name having no value stored so its value is undefined now
+Symbol
+
+2)Reference Data Types
+Arrays
+Object Literals
+functions
+Dates
+===========================================================================
+===========================================================================
+Session 5
