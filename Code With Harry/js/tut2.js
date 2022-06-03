@@ -1,3 +1,5 @@
+
+//console related 
 console.time("Your code Took");
 console.log("hello console");
 console.log(34 + 5);
