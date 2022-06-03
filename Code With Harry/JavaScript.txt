@@ -1,0 +1,54 @@
+Session 1)
+What is Client Side VS Server Side?
+
+In simple
+
+Client side:front end(HTML,CSS,JS)
+Server Side;Back end(PHP,Python)
+
+Example:
+suppose there are three users to the website
+if any users searched for google.com then server provides
+a webpage having html css and js logic
+when client user get back response the logic is infront of that user
+
+In such a way diffrent diffrent user request for sepcific things/pages
+and server side reponse is received to that user from server
+
+===========================================================================
+emmet feature in Vs code
+1) span#d1*34 
+creats 34 span tag having same id d1
+
+2) div.class1.class2*5  
+it creates 5 div having both seperate classes class1 and class2
+
+3)script:src
+it will create script tag with including src attribute in it
+
+===========================================================================
+===========================================================================
+Session 2
+Console logs,errors,warining and more details
+
+console.time("Your code Took"); 
+console.log("hello console");
+console.log(34 + 5);
+console.log(34);
+console.log(true);
+console.log([23, 22, 1, 34]); //array printed
+console.log({ name: "lokesh", age: "25" })//object details printed on console
+console.table({ name: "lokesh", age: "25" }); //object details printed on tabular format on console
+console.warn("this is warning"); //for warning
+// console.clear();
+console.timeEnd("Your code Took");
+// console.assert(566 > 189, "age  > 189 is not possible");
+console.error("this is an error"); // for showing an error on console
+
+===========================================================================
+===========================================================================
+Session 3
+
+
+
+
