@@ -1,4 +1,4 @@
-//loops and function
+//loops
 
 console.log("We are in tutorial 9");
 
