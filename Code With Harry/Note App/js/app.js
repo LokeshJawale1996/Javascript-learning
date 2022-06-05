@@ -13,7 +13,6 @@ addBtn.addEventListener("click", function (e) {
   }
   notesObj.push(addText.value);
   localStorage.setItem("notes", JSON.stringify(notesObj));
-
   addText.value = "";
   console.log(notesObj);
   showNotes();
@@ -27,7 +26,6 @@ function showNotes() {
   } else {
     notesObj = JSON.parse(notes);
   }
-
   let html = "";
   notesObj.forEach(function (element, index) {
     html += `
@@ -58,6 +56,22 @@ function deleteNote(index) {
   }
   notesObj.splice(index, 1);
   localStorage.setItem("notes", JSON.stringify(notesObj));
-
   showNotes();
 }
+
+//
+searchTxt = document.getElementById("searchTxt");
+searchTxt.addEventListener("input", function () {
+  let inputVal = search.value.toLowerCase();
+  // console.log("input event fired", inputVal);
+  let noteCards = document.getElementsByClassName("noteCard");
+  Array.from(noteCards).forEach(function (element) {
+    let cardTxt = element.getElementsByTagName("p")[0].innerText;
+    // console.log(cardTxt);
+    if (cardTxt.includes(inputVal)) {
+      element.Style.display = "block";
+    } else {
+      element.Style.display = "none";
+    }
+  });
+});
