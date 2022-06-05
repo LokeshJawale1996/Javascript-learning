@@ -1,0 +1,6 @@
+1)Note App
+deployed on netlify
+
+we can check demo app on below link
+https://lokesh-noteappdemo.netlify.app/
+==============================================
