@@ -1,25 +1,69 @@
-Session 21
-
-
-
-//====================================================================================================
-//====================================================================================================
-Session 22
-
-
-
-
-//====================================================================================================
-//====================================================================================================
-
 Session 23
 
+Math Object
+console.log("We are in tutorial 23");
+
+let x = 3;
+let y = 6;
+let z;
+z = x + y;
+z = x - y;
+z = x * y;
+z = x / y;
+
+// Exploring the Math object
+z = Math;
+z = Math.PI;
+z = Math.E;
+z = Math.round(5.4); //5
+z = Math.ceil(5.3); //6
+z = Math.floor(-5.3); //-6
+z = Math.abs(-5); //5
+z = Math.sqrt(64); //8
+z = Math.pow(2, 3); //8
+z = Math.min(2, 3, 34, 234, 2342, 34); //2
+z = Math.max(2, 3, 34, 234, 34); //234
+z = Math.random();
+z = 100 * Math.random();
+z = Math.ceil(50 + (100 - 50) * Math.random());
+// a = (0, 1)
+// a100 = a*100 = (0, 100)
+// a10_100 = 10+a*(100 - 10)
+
+console.log(z);
 
 
 
 //====================================================================================================
 //====================================================================================================
 Session 24
+Date Object
+
+console.log("Welcome to tutorial 24");
+
+let today = new Date();
+// console.log(typeof today);
+let otherDate = new Date("8-4-2003 04:54:08");
+// otherDate = new Date('June 13 1976');
+// otherDate = new Date('09/16/1976');
+console.log(otherDate);
+let a;
+a = otherDate.getDay();
+a = otherDate.getDate();
+a = otherDate.getMinutes();
+// a = otherDate.getSeconds();
+// a = otherDate.getHours();
+a = otherDate.getTime();
+a = otherDate.getMilliseconds();
+a = otherDate.getMonth();
+console.log(a);
+otherDate.setDate(23);
+otherDate.setMonth(0);
+otherDate.setFullYear(1900);
+otherDate.setMinutes(2);
+otherDate.setHours(1);
+otherDate.setSeconds(3);
+console.log(otherDate);
 
 
 
@@ -27,24 +71,77 @@ Session 24
 //====================================================================================================
 Session 25
 
-//====================================================================================================
-//====================================================================================================
-
-Session 26
-
-
 
 
 //====================================================================================================
 //====================================================================================================
 
 Session 27
+Object Literals Constrctors
+
+console.log("This is tut 27");
+
+// Object Literal for creating objects
+let car = {
+  name: "Maruti 800",
+  topSpeed: 89,
+  run: function () {
+    console.log("car is running");
+  },
+};
+// we have already seen constructors like these:
+// new Date();
+
+// Creating a constructor for cars
+function GeneralCar(givenName, givenSpeed) {
+  this.name = givenName;
+  this.topSpeed = givenSpeed;
+  this.run = function () {
+    console.log(`${this.name} Is Running`);
+  };
+  this.analyze = function () {
+    console.log(
+      `This car is slower by ${200 - this.topSpeed} Km/H than Mercedes`
+    );
+  };
+}
+car1 = new GeneralCar("Nissan", 180);
+car2 = new GeneralCar("Marutu Alto", 80);
+car3 = new GeneralCar("Mercedes", 200);
+console.log(car1, car2, car3);
 
 
 
 //====================================================================================================
 //====================================================================================================
 Session 28
+
+Object prototype
+
+console.log("This is tutorial 28");
+
+// Object literal : Object.prototype
+let obj = {
+    name: "harry",
+    channel: "Code With Harry",
+    address: "Mars"
+}
+
+function Obj(givenName){
+    this.name = givenName
+}
+
+Obj.prototype.getName = function (){
+    return this.name;
+}
+
+Obj.prototype.setName = function (newName){
+  this.name = newName;
+}
+
+let obj2 = new Obj("Rohan Das");
+console.log(obj2);
+ 
 
 //====================================================================================================
 //====================================================================================================
