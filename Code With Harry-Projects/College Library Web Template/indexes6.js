@@ -54,7 +54,6 @@ class Display {
   }
 }
 
-// Add submit event listener to libraryForm
 let libraryForm = document.getElementById("libraryForm");
 libraryForm.addEventListener("submit", libraryFormSubmit);
 

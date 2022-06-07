@@ -67,6 +67,19 @@ console.log("This is tutorial 32");
 //====================================================================================================
 
 Session 34
+What is asynchronos programming?
+
+console.log("This is tutorial 34");
+
+setTimeout(() => {
+  for (let index = 0; index < 105; index++) {
+    const element = index;
+    console.log("This is index number" + index);
+  }
+}, 100);
+
+console.log("done printing");
+
 
 
 
@@ -74,6 +87,32 @@ Session 34
 //====================================================================================================
 
 session 35
+AJAX
+
+AJAX stands for asynchronos JavaScript and XML
+
+AJAX is not programming language.Rather, it's a set of existing technologies.
+
+AJAX helps in fetching data asynchronously without interfering with existing page.
+
+No page reload/refresh
+
+Modern websites use JSON instead or XML for data transfer
+
+
+Advantages
+1)No page reload/refresh
+2)Saves Network bandwith
+3)Better user experiance
+4)Very Interactive
+
+
+How it works?
+1)AJAX uses XMLHttpRequest object(also called xhr object) to achieve this
+
+2)Modern websites use JSON instead or XML for data transfer.
+
+3)Data can be transferrd in any format and protocol (Not always https necessarily)
 
 //====================================================================================================
 //====================================================================================================
