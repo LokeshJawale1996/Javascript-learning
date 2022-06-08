@@ -116,3 +116,84 @@ How it works?
 
 //====================================================================================================
 //====================================================================================================
+
+Session 36
+
+console.log("This is tutorial 36 -sol tut 32");
+
+// create a class library and implement the following:
+// constructor must take the book list as an argument
+// getBookList()
+// issueBook(bookname, user)
+// returnBook(bookname)
+
+class Library {
+  constructor(bookList) {
+    this.bookList = bookList;
+    this.issuedBooks = {};
+  }
+
+  getBookList() {
+    this.bookList.forEach((element) => {
+      console.log(element);
+    });
+  }
+
+  issueBook(bookname, user) {
+    if (this.issuedBooks[bookname] == undefined) {
+      this.issuedBooks[bookname] = user;
+    } else {
+      console.log("This book is already issued!");
+    }
+  }
+
+  returnBook(bookname) {
+    delete this.issuedBooks[bookname];
+  }
+}
+
+// //testing
+// lib = new Library("abcd", "efgh", "ijkh");
+// lib.getBookList();
+// lib.issueBook("abcd", "lokesh");
+// lib.issueBook("abcd", "lokesh");
+// lib.returnBook('abcd');
+
+
+//====================================================================================================
+//====================================================================================================
+Session 37
+
+console.log("This is tutorial 37");
+
+//callback function
+// Pretend that this response is coming from the server
+const students = [
+  { name: "harry", subject: "JavaScript" },
+  { name: "Rohan", subject: "Machine Learning" },
+];
+
+function enrollStudent(student, callback) {
+  setTimeout(function () {
+    students.push(student);
+    console.log("Student has been enrolled");
+    callback();
+  }, 1000);
+}
+
+function getStudents() {
+  setTimeout(function () {
+    let str = "";
+    students.forEach(function (student) {
+      str += `<li> ${student.name}</li>`;
+    });
+    document.getElementById("students").innerHTML = str;
+    console.log("Students have been fetched");
+  }, 5000);
+}
+
+let newStudent = { name: "Sunny", subject: "Python" };
+enrollStudent(newStudent, getStudents);
+// getStudents();
+//====================================================================================================
+//====================================================================================================
