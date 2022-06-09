@@ -51,11 +51,99 @@ Session 42
 Fecth API
 
 
+console.log("This is my tutorial 42");
+
+// Button with id myBtn
+let myBtn = document.getElementById("myBtn");
+
+// div with id content
+let content = document.getElementById("content");
+
+// function getData() {
+//   console.log("Started getData");
+//   url = "lokesh.txt";
+//   fetch(url)
+//     .then((response) => {
+//       console.log("Inside first then");
+//       return response.text();
+//     })
+//     .then((data) => {
+//       console.log("Inside second then");
+//       console.log(data);
+//     });
+// }
+// getData();
+
+// function getJsonData() {
+//   console.log("started getJsonData");
+//   // url = "dummy.json";
+//   url = "https://api.github.com/users";
+//   fetch(url)
+//     .then((response) => {
+//       console.log("Inside first then");
+//       return response.json();
+//     })
+//     .then((data) => {
+//       console.log("Inside first then");
+//       console.log(data);
+//     });
+// }
+// console.log("Before Running getJsonData");
+// getJsonData();
+// console.log("After Running getJsonData");
+
+function postData() {
+  // url = "http://dummy.restapiexample.com/api/v1/create";
+  url = "https://api.instantwebtools.net/v1/airlines";
+  // data = '{"name":"lokessdh","salary":"1234","age":"25"}';
+  data = {
+    id: 13,
+    name: "Sri Lankan Airways1",
+    country: "Sri Lanka1",
+    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Qatar_Airways_Logo.svg/sri_lanka.png",
+    slogan: "From Sri Lanka1",
+    head_quaters: "Katunayake, Sri Lanka1",
+    website: "www.srilankaairways.com1",
+    established: "1991",
+  };
+  params = {
+    method: "post",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: data,
+  };
+  fetch(url, params)
+    .then((response) => response.json())
+    .then((data) => console.log(data));
+}
+
+postData();
 
 
 ================================================================================
 =================================================================================
 Session 43
+await asynchronos
+console.log("This is Tutorial 43");
+//async returns a promise
+//await asynchronously handled
+async function lokesh() {
+  console.log("Inside lokesh function");
+  const response = await fetch("https://api.github.com/users");
+  console.log("Before Response");
+  const users = await response.json();
+  console.log("users resolved");
+  return users;
+  // return "harry";
+}
+
+console.log("Before Calling lokesh");
+let a = lokesh();
+console.log("After Calling lokesh");
+console.log(a);
+a.then((data) => console.log(data));
+console.log("Last line of this js file");
 
 
 
@@ -89,3 +177,135 @@ try {
 } finally {
   console.log("Finally we will run this");
 }
+
+=========================================================================================
+========================================================================================
+Session 46
+
+REGULAR EXPRESSION -functions
+console.log("This is tutorial 46");
+
+let reg = /harry/; // This is a regular expression literal in js
+reg = /harry/g; // g means global
+// reg = /harry/i; // i means case insensitive
+
+// console.log(reg);
+// console.log(reg.source);
+
+let s = "This is great code with harry and also harry bhai";
+// Functions to match expressions
+// 1. exec() - This function will return an array for match or null for no match
+let result = reg.exec(s);
+// result = reg.exec(s);
+// console.log(result);
+// result = reg.exec(s);
+// console.log(result); ---> We can use multiple exec with global flag
+
+// if (result) {
+//   console.log(result);
+//   console.log(result.input);
+//   console.log(result.index);
+// }
+
+// 2. test() - Returns true or false
+let result2 = reg.test(s);
+console.log(result2); //--> This will only print true if the "reg" is there in the string "s"
+
+// 3. match() - It will return an array of results or null
+// let result3 = reg.match(s) ---> This is wrong!!
+let result3 = s.match(reg); // ---> This is right
+// console.log(result3);
+
+// 4. search() - Returns index of first match else -1
+// let result4 = reg.search(s) ---> This is wrong!!
+let result4 = s.search(reg); // ---> This is right
+// console.log(result4);
+
+// 5. replace() - Returns new replaced string with all the replacements (if no flag is given, first match will be replaced)
+
+let result5 = s.replace(reg, "SHUBHAM");
+// console.log(result5);
+
+==================================================================================================
+=================================================================================================
+Session 47
+
+Regular Expression -Metacharater
+
+console.log("This is tutorial 47");
+
+let regex = /harry/;
+//Lets look inti some metachracter symbols
+regex = /^harrdc/; // ^ means expression will match if string starts with
+regex = /ry$/; // $ means expression will match if string ends with
+regex = /h.rry/; //. matches any one character
+regex = /h*y/; // * matches any zero or more character
+regex = /ha?rryi?/; //? after character means that chracter is optional
+regex = /h\*rry/; //if we want exact match of * then use \ before *
+
+let str = "harry is harry";
+
+let result = regex.exec(str);
+console.log("The result from exec is", result);
+
+if (regex.test(str)) {
+  console.log(`The string ${str} matches the expression ${regex.source}`);
+} else {
+  console.log(
+    `The string ${str} dpes not matches the expression ${regex.source}`
+  );
+}
+=================================================================================================
+==================================================================================================
+session 48
+
+Regular Expression -character set
+
+console.log("This is tutorial 48");
+
+//Regular Expressions:
+//Basic Functions
+//Metacharacter Symbols
+
+// const regex = /^h/i;
+//Character Set []
+
+let regex = /h[a-z]rry/;
+regex = /h[aty]rry/; //can be an a ,t and y
+regex = /h[^aty]rry/; //cannot beany of a ,t and y
+regex = /h[^aty]rr[yYu]/; //cannot be a ,t and y + can be an y ,Y or u
+regex = /h[a-zA-Z]rr[yu0-9][0-9]/; //we can have as many characters sets as we want
+
+//Quantifiers
+regex = /ha{2}y/; //r can occur exactly 2 times
+regex = /ha{0,2}y/; //r can occur exactly 0 or 1 or 2(0 to 2) times
+
+//Groupings -we use parenthesis for groupings
+regex = /(har){2}([0-9]r){3}/;
+
+// const str = "hirr99 Bhai";
+let str = "harry bhai";
+// str = "harharbhai";
+str = "harhar1r3r4r";
+
+let result = regex.exec(str);
+
+console.log("The result from exec is", result);
+
+if (regex.test(str)) {
+  console.log(`The string ${str} matches the expression ${regex.source}`);
+} else {
+  console.log(
+    `The string ${str} dpes not matches the expression ${regex.source}`
+  );
+}
+
+==========================================================================================
+=========================================================================================
+Session 49 
+
+Regular Expression - Shorthand character classes
+
+
+=========================================================================================
+========================================================================================
