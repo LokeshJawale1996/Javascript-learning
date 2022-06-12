@@ -9,7 +9,7 @@ name.addEventListener("blur", () => {
   console.log("name is blurred");
   //validate name here
   let regex = /^[a-zA-Z]([0-9a-zA-Z]){0,10}/;
-  // +  let str = name.value;
+  let str = name.value;
   // console.log(regex, str);
 
   if (regex.test(str)) {
