@@ -7,6 +7,7 @@ made for tutorial learning notes and codes
 
 - [DOM & Events: Guess My Number](./Udemy/05-Guess-My-Number/starter/script.js)
 - [DOM & Events: Modal](./Udemy/06-Modal/starter/script.js)
+- [DOM & Events :Pig Game](./Udemy/07-Pig-Game/starter/script.js)
 
 <h1>Youtube Learning<h1>
 <h2>Some Basic Projects in JS(Code)</h2>
