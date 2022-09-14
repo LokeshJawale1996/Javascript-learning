@@ -1,6 +1,6 @@
-# Javacript-learning
+# Javascript-learning
 
-![visitors](https://visitor-badge.glitch.me/badge?page_id=lokeshjawale96.Javacript-learning)
+![visitors](https://visitor-badge.glitch.me/badge?page_id=lokeshjawale96.Javascript-learning)
 
 made for tutorial learning notes and codes
 
